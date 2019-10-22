@@ -20,10 +20,11 @@ const App = props => {
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs' render={() => <Dialogs
                         state={props.state.dialogsPage}
+                        dispatch={props.dispatch}
                     />} />
                     <Route path='/profile' render={() => <Profile
                         state={props.state.profilePage}
-                        addPost={props.addPost}
+                        dispatch={props.dispatch}
                     />} />
                     <Route path='/news' render={() => <News/>} />
                     <Route path='/music' render={() => <Music/>} />
@@ -32,6 +33,6 @@ const App = props => {
             </div>
         </BrowserRouter>
     );
-}
+};
 
 export default App;

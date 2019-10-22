@@ -3,20 +3,24 @@ import { addPostCreator, updateNewPostCreator } from "../../../redux/profile.red
 import MyPosts from "./MyPosts";
 
 const MyPostsContainer = props => {
+    let state = props.store.getState();
+
     const addPost = () => {
         const action = addPostCreator();
-        props.dispatch(action);
+        props.store.dispatch(action);
     };
 
     const onPostChange = (text) => {
         const action = updateNewPostCreator(text);
-        props.dispatch(action);
+        props.store.dispatch(action);
     };
 
     return (
         <MyPosts
             updateNewPostText={onPostChange}
             addPost={addPost}
+            posts={state.profilePage.posts}
+            newPostText={state.profilePage.newPostText}
         />
     )
 };

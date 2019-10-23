@@ -29,7 +29,7 @@ const Dialogs = props => {
                 {messagesElements}
                 <div>
                     <textarea
-                        value={state.messageText}
+                        value={state.newMessageBody}
                         onChange={onMessageChange}
                         placeholder={'Write a message...'}
                     />

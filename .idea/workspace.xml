@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa13560c-933e-4fac-b6f5-887bac71a57e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/r_strogan.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/Users.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/def-user-img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users.reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,10 +52,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\r.strogan\Documents\learning-app\src\components\Users" />
+      <recent name="C:\Users\r.strogan\Documents\learning-app\src\assets\images" />
       <recent name="C:\Users\r.strogan\Documents\learning-app\src\components\Dialogs" />
       <recent name="C:\Users\r.strogan\Documents\learning-app\src\components\Profile\MyPosts" />
       <recent name="C:\Users\r.strogan\Documents\learning-app\src\redux" />
-      <recent name="D:\Prog\WebstormProjects\learning-app\src\components\Profile\MyPosts\Post" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -103,7 +99,7 @@
       <updated>1571499437302</updated>
       <workItem from="1571499442772" duration="24198000" />
       <workItem from="1571576324201" duration="4674000" />
-      <workItem from="1571723276194" duration="44496000" />
+      <workItem from="1571723276194" duration="53105000" />
     </task>
     <servers />
   </component>

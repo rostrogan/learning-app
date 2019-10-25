@@ -1,3 +1,5 @@
+import * as types from '../actionTypes';
+
 const initialState = {};
 
 const sidebarReducer = (state = initialState, action) => {

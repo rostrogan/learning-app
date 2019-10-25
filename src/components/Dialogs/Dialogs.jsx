@@ -1,5 +1,5 @@
 import React from 'react';
-import {addMessageCreator, updateMessageTextCreator} from "../../redux/dialogs.reducer";
+import {addMessageCreator, updateMessageTextCreator} from "../../store/reducers/dialogs.reducer";
 
 import {NavLink} from "react-router-dom";
 

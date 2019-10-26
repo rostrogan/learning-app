@@ -1,18 +1,19 @@
 import * as types from '../actionTypes';
+import nanoid from 'nanoid';
 
 const initialState = {
     dialogs: [
-        {id: 1, name: 'Roman'},
-        {id: 2, name: 'Valeriia'},
-        {id: 3, name: 'Dima'},
-        {id: 4, name: 'Alex'},
-        {id: 5, name: 'Vasil'},
-        {id: 6, name: 'Jack'},
+        {id: nanoid(5), name: 'Roman'},
+        {id: nanoid(5), name: 'Valeriia'},
+        {id: nanoid(5), name: 'Dima'},
+        {id: nanoid(5), name: 'Alex'},
+        {id: nanoid(5), name: 'Vasil'},
+        {id: nanoid(5), name: 'Jack'},
     ],
     messages: [
-        {id: 1, message: 'Hi'},
-        {id: 2, message: 'How are you?'},
-        {id: 3, message: 'Yo!'}
+        {id: nanoid(5), message: 'Hi'},
+        {id: nanoid(5), message: 'How are you?'},
+        {id: nanoid(5), message: 'Yo!'}
     ],
     newMessageBody: ''
 };

@@ -1,18 +1,21 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import Icon from "@material-ui/core/Icon";
 
 import s from './Header.module.css';
 
 const Header = props => {
-    return(
+    return (
         <header className={s.header}>
-            <img src="https://svn.apache.org/repos/infra/websites/production/ooo-site/content/images/aoo-logo-100x100.png" alt="logo"/>
-            <div className={s.loginBlock}>
-                {
-                    props.isAuth
-                        ? props.login
-                        : <NavLink to={'/login'}>Login</NavLink>
-                }
+            <div className={'app-container'}>
+                <div className={s.logo}>react-net-app</div>
+                <div className={s.loginBlock}>
+                    {
+                        props.isAuth
+                            ? props.login
+                            : <NavLink to={'/login'}>Login</NavLink>
+                    }
+                </div>
             </div>
         </header>
     )

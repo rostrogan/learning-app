@@ -1,11 +1,12 @@
 import * as types from '../actionTypes';
+import nanoid from 'nanoid';
 
 const initialState = {
     posts: [
-        {id: 1, message: 'Hi, how are you?', likesCount: 10},
-        {id: 2, message: 'Its my first post', likesCount: 15}
+        {id: nanoid(5), message: 'Hi, how are you?', likesCount: 10},
+        {id: nanoid(5), message: 'Its my first post', likesCount: 15}
     ],
-    newPostText: 'Enter post text',
+    newPostText: '',
     currentProfile: {}
 };
 
@@ -15,7 +16,7 @@ const profileReducer = (state = initialState, action) => {
             return {
                 ...state,
                 newPostText: '',
-                posts: [...state.posts, {id: 555, message: state.newPostText, likesCount: 0}]
+                posts: [{id: 555, message: state.newPostText, likesCount: 0}, ...state.posts]
             };
 
         case types.UPDATE_NEW_POST_TEXT:

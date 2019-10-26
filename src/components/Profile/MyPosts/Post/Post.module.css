@@ -1,8 +1,25 @@
 .item {
+    display: flex;
+    align-items: center;
     color: greenyellow;
+    background-color: #E44D3A;
+    border-radius: 50px;
+    position: relative;
 }
 
 .item img {
     width: 50px;
     border-radius: 50%;
+    position: relative;
+    left: -1px;
+}
+
+.message {
+    margin-left: 10px;
+}
+
+.likes {
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }

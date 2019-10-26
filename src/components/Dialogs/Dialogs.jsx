@@ -1,5 +1,4 @@
 import React from 'react';
-import {addMessageCreator, updateMessageTextCreator} from "../../store/reducers/dialogs.reducer";
 
 import {NavLink} from "react-router-dom";
 
@@ -8,8 +7,8 @@ import s from './Dialogs.module.css';
 const Dialogs = props => {
     const state = props.dialogsPage;
 
-    const dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
-    const messagesElements = state.messages.map(m => <MessageItem message={m.message} id={m.id}/>);
+    const dialogsElements = state.dialogs.map(d => <DialogItem key={d.id} name={d.name} id={d.id} />);
+    const messagesElements = state.messages.map(m => <MessageItem key={m.id} message={m.message} id={m.id}/>);
 
     const onMessageChange = (e) => {
         let text = e.target.value;

@@ -1,3 +1,41 @@
-.descriptionBlock {
-    padding: 10px;
+.profileInfoContainer {
+
 }
+
+.wallpaperWrapper {
+  height: 120px;
+  overflow: hidden;
+}
+
+.wallpaperWrapper img {
+  width: 100%;
+  filter: blur(2px);
+}
+
+.descriptionBlock {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.textInfo {
+  display: flex;
+  padding-left: 50px;
+}
+
+.personalInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textInfoFullName {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.textInfoAboutMe {}
+
+.contacts {}

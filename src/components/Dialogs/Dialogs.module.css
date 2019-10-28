@@ -8,6 +8,14 @@
     color: white;
 }
 
+.messagesContainer {
+    display: grid;
+    grid-row-gap: 10px;
+
+    max-height: 490px;
+    overflow-y: scroll;
+}
+
 .dialogsItems .dialog {
 
 }
@@ -22,4 +30,8 @@
 
 .messages .message {
     color: white;
+}
+
+.inputGroup {
+    margin-top: 10px;
 }

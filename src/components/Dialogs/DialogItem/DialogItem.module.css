@@ -1,0 +1,15 @@
+.dialogItem {
+    display: flex;
+    justify-items: center;
+    height: 30px;
+}
+
+.dialogItem a {
+    color: black;
+    text-decoration: none;
+}
+
+.dialogItem a.active {
+    color: #E44D3A;
+    font-weight: 700;
+}

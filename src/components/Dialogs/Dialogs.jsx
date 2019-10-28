@@ -1,22 +1,27 @@
 import React from 'react';
-
 import {NavLink} from "react-router-dom";
-
+import DialogItem from "./DialogItem/DialogItem";
+import MessageItem from "./MessageItem/MessageItem";
 import s from './Dialogs.module.css';
 
 const Dialogs = props => {
     const state = props.dialogsPage;
-
-    const dialogsElements = state.dialogs.map(d => <DialogItem key={d.id} name={d.name} id={d.id} />);
+    const newMessageElement = React.createRef();
+    const dialogsElements = state.dialogs
+        .map(d => <DialogItem
+            key={d.id}
+            name={d.name}
+            id={d.id}
+        />);
     const messagesElements = state.messages.map(m => <MessageItem key={m.id} message={m.message} id={m.id}/>);
 
     const onMessageChange = (e) => {
-        let text = e.target.value;
+        const text = e.target.value;
         props.updateNewMessageBody(text);
     };
 
-    const onSendMessageClick = () => {
-        props.sendMessage();
+    const onSendMessageClick = (e) => {
+        newMessageElement.current.value !== '' && props.sendMessage();
     };
 
     return (
@@ -25,36 +30,24 @@ const Dialogs = props => {
                 {dialogsElements}
             </div>
             <div className={s.messages}>
-                {messagesElements}
-                <div>
-                    <textarea
+                <div className={s.messagesContainer}>
+                    {messagesElements}
+                </div>
+                <div className={s.inputGroup}>
+                    <input
+                        type={'text'}
                         value={state.newMessageBody}
                         onChange={onMessageChange}
                         placeholder={'Write a message...'}
+                        ref={newMessageElement}
                     />
-                    <div>
-                        <button
-                            onClick={onSendMessageClick}
-                        >Send!</button>
-                    </div>
+                    <button
+                        onClick={onSendMessageClick}
+                    >Send!
+                    </button>
                 </div>
             </div>
         </div>
-    )
-};
-
-const DialogItem = props => {
-    const path = `/dialogs/${props.id}`;
-    return (
-        <div className={s.dialog + ' ' + s.active}>
-            <NavLink to={path}>{props.name}</NavLink>
-        </div>
-    )
-};
-
-const MessageItem = props => {
-    return (
-        <div className={s.message}>{props.message}</div>
     )
 };
 

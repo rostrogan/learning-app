@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import s from './Users.module.css';
 import defaultUserPhoto from '../../assets/images/def-user-img.png'
+import * as axios from "axios";
 
 const Users = props => {
 
@@ -41,8 +42,19 @@ const Users = props => {
                         <div>
                             {
                                 u.followed
-                                    ? <button onClick={() => props.unfollow(u.id)}>Unfollow</button>
-                                    : <button onClick={() => props.follow(u.id)}>Follow</button>
+                                    ? <button onClick={() => {l
+                                        axios
+                                            .post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`)
+                                            .then(response => {
+                                                this.props.setUsers(response.data.items);
+                                                this.props.setTotalUsersCount(response.data.totalCount);
+                                                this.props.setIsFetching(false);
+                                            });
+                                        props.unfollow(u.id)
+                                    }}>Unfollow</button>
+                                    : <button onClick={() => {
+                                        props.follow(u.id)
+                                    }}>Follow</button>
                             }
                         </div>
                     </span>

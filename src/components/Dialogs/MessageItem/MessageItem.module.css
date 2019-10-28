@@ -1,0 +1,22 @@
+.messageItemContainer {
+    display: flex;
+    background-color: #E44D3A;
+    border-radius: 50px;
+    padding: 7px 14px;
+    width: max-content;
+    max-width: 80%;
+}
+
+.message {
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.timestamp {
+    color: white;
+    font-size: 11px;
+    line-height: 17px;
+    position: relative;
+    top: 5px;
+}

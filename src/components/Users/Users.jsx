@@ -21,7 +21,11 @@ const Users = props => {
                 {
                     pages.map((p, index) => {
                         return (
-                            <span className={props.currentPage === p ? s.selectedPaginationButton : null}
+                            <span className={
+                                props.currentPage === p
+                                    ? s.selectedPaginationButton
+                                    : null
+                            }
                                   onClick={e => props.onPageChanged(p)}
                                   key={index}
                             >{p}</span>
@@ -34,7 +38,11 @@ const Users = props => {
                     <span>
                         <div>
                             <NavLink to={`/profile/${u.id}`}>
-                                <img src={u.photos.small != null ? u.photos.small : defaultUserPhoto}
+                                <img src={
+                                    u.photos.small != null
+                                        ? u.photos.small
+                                        : defaultUserPhoto
+                                }
                                      className={s.userPhoto}
                                      alt={'Avatar'}
                                 />
@@ -56,7 +64,7 @@ const Users = props => {
                                             });
                                         }}>{
                                         props.isFollowingProcess.some(id => id === u.id)
-                                            ? <Preloader />
+                                            ? <Preloader/>
                                             : 'Unfollow'
                                     }</button>
                                     : <button
@@ -71,10 +79,10 @@ const Users = props => {
                                                 props.setFollowingProcess(false, u.id);
                                             });
                                         }}>{
-                                            props.isFollowingProcess.some(id => id === u.id)
-                                                ? <Preloader />
-                                                : 'Follow'
-                                        }</button>
+                                        props.isFollowingProcess.some(id => id === u.id)
+                                            ? <Preloader/>
+                                            : 'Follow'
+                                    }</button>
                             }
                         </div>
                     </span>

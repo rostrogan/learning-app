@@ -7,7 +7,8 @@ import {
     unfollow,
     setCurrentPage,
     setTotalUsersCount,
-    setIsFetching
+    setIsFetching,
+    setFollowingProcess
 } from "../../store/actions/users.actions";
 
 const mapStateToProps = state => {
@@ -16,7 +17,8 @@ const mapStateToProps = state => {
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching
+        isFetching: state.usersPage.isFetching,
+        isFollowingProcess: state.usersPage.isFollowingProcess
     }
 };
 
@@ -26,5 +28,6 @@ export default connect(mapStateToProps, {
     setUsers,
     setCurrentPage,
     setTotalUsersCount,
-    setIsFetching
+    setIsFetching,
+    setFollowingProcess
 })(UsersAPIComponent);

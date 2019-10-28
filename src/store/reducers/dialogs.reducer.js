@@ -13,6 +13,17 @@ const initialState = {
     messages: [
         {id: nanoid(5), message: 'Hi'},
         {id: nanoid(5), message: 'How are you?'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
+        {id: nanoid(5), message: 'Yo!'},
         {id: nanoid(5), message: 'Yo!'}
     ],
     newMessageBody: ''

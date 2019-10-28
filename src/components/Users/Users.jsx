@@ -2,7 +2,8 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 import s from './Users.module.css';
 import defaultUserPhoto from '../../assets/images/def-user-img.png'
-import * as axios from "axios";
+import Preloader from "../common/Preloader/Preloader";
+import {usersApi} from "../../api/users.api";
 
 const Users = props => {
 
@@ -42,19 +43,38 @@ const Users = props => {
                         <div>
                             {
                                 u.followed
-                                    ? <button onClick={() => {l
-                                        axios
-                                            .post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`)
-                                            .then(response => {
-                                                this.props.setUsers(response.data.items);
-                                                this.props.setTotalUsersCount(response.data.totalCount);
-                                                this.props.setIsFetching(false);
+                                    ? <button
+                                        className={s.followButton}
+                                        disabled={props.isFollowingProcess.some(id => id === u.id)}
+                                        onClick={() => {
+                                            props.setFollowingProcess(true, u.id);
+                                            usersApi.unfollow(u.id).then(data => {
+                                                if (data.resultCode === 0) {
+                                                    props.unfollow(u.id)
+                                                }
+                                                props.setFollowingProcess(false, u.id);
                                             });
-                                        props.unfollow(u.id)
-                                    }}>Unfollow</button>
-                                    : <button onClick={() => {
-                                        props.follow(u.id)
-                                    }}>Follow</button>
+                                        }}>{
+                                        props.isFollowingProcess.some(id => id === u.id)
+                                            ? <Preloader />
+                                            : 'Unfollow'
+                                    }</button>
+                                    : <button
+                                        className={s.followButton}
+                                        disabled={props.isFollowingProcess.some(id => id === u.id)}
+                                        onClick={() => {
+                                            props.setFollowingProcess(true, u.id);
+                                            usersApi.follow(u.id).then(data => {
+                                                if (data.resultCode === 0) {
+                                                    props.follow(u.id)
+                                                }
+                                                props.setFollowingProcess(false, u.id);
+                                            });
+                                        }}>{
+                                            props.isFollowingProcess.some(id => id === u.id)
+                                                ? <Preloader />
+                                                : 'Follow'
+                                        }</button>
                             }
                         </div>
                     </span>

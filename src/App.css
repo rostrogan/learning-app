@@ -4,3 +4,19 @@
     padding-bottom: 30px;
     margin-bottom: 50px;
 }
+
+::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(228,77,58, .2);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(228,77,58, 1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(228,77,58, 1);
+}

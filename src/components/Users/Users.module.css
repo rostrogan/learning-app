@@ -5,3 +5,18 @@
 .selectedPaginationButton {
     font-weight: bold;
 }
+
+.followButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 65px;
+}
+
+.followButton > div {
+    height: 20px;
+}
+
+.followButton img {
+    width: 20px;
+}

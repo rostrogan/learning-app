@@ -1,29 +1,14 @@
 import React, {Component} from 'react';
-import {usersApi} from "../../api/users.api";
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
 
 class UsersAPIComponent extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
-        this.props.setIsFetching(true);
-        usersApi.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
-            this.props.setUsers(data.items);
-            this.props.setTotalUsersCount(data.totalCount);
-            this.props.setIsFetching(false);
-        });
+        this.props.getUsers(this.props.currentPage, this.props.pageSize);
     };
 
     onPageChanged(pageNumber) {
-        this.props.setCurrentPage(pageNumber);
-        this.props.setIsFetching(true);
-        usersApi.getUsers(pageNumber, this.props.pageSize).then(data => {
-            this.props.setUsers(data.items);
-            this.props.setIsFetching(false);
-        });
+        this.props.getUsers(pageNumber, this.props.pageSize);
     };
 
     render() {
@@ -38,7 +23,6 @@ class UsersAPIComponent extends Component {
                     users={this.props.users}
                     follow={this.props.follow}
                     unfollow={this.props.unfollow}
-                    setFollowingProcess={this.props.setFollowingProcess}
                     isFollowingProcess={this.props.isFollowingProcess}
                 />
             </>

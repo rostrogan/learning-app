@@ -3,12 +3,10 @@ import {connect} from 'react-redux';
 import UsersAPIComponent from "./UsersAPIComponent";
 import {
     follow,
-    setUsers,
     unfollow,
     setCurrentPage,
-    setTotalUsersCount,
-    setIsFetching,
-    setFollowingProcess
+    setFollowingProcess,
+    getUsers
 } from "../../store/actions/users.actions";
 
 const mapStateToProps = state => {
@@ -25,9 +23,7 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
     follow,
     unfollow,
-    setUsers,
     setCurrentPage,
-    setTotalUsersCount,
-    setIsFetching,
-    setFollowingProcess
+    setFollowingProcess,
+    getUsers
 })(UsersAPIComponent);

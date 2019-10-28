@@ -3,10 +3,8 @@ import {NavLink} from "react-router-dom";
 import s from './Users.module.css';
 import defaultUserPhoto from '../../assets/images/def-user-img.png'
 import Preloader from "../common/Preloader/Preloader";
-import {usersApi} from "../../api/users.api";
 
 const Users = props => {
-
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
@@ -55,13 +53,7 @@ const Users = props => {
                                         className={s.followButton}
                                         disabled={props.isFollowingProcess.some(id => id === u.id)}
                                         onClick={() => {
-                                            props.setFollowingProcess(true, u.id);
-                                            usersApi.unfollow(u.id).then(data => {
-                                                if (data.resultCode === 0) {
-                                                    props.unfollow(u.id)
-                                                }
-                                                props.setFollowingProcess(false, u.id);
-                                            });
+                                            props.unfollow(u.id);
                                         }}>{
                                         props.isFollowingProcess.some(id => id === u.id)
                                             ? <Preloader/>
@@ -71,13 +63,7 @@ const Users = props => {
                                         className={s.followButton}
                                         disabled={props.isFollowingProcess.some(id => id === u.id)}
                                         onClick={() => {
-                                            props.setFollowingProcess(true, u.id);
-                                            usersApi.follow(u.id).then(data => {
-                                                if (data.resultCode === 0) {
-                                                    props.follow(u.id)
-                                                }
-                                                props.setFollowingProcess(false, u.id);
-                                            });
+                                            props.follow(u.id);
                                         }}>{
                                         props.isFollowingProcess.some(id => id === u.id)
                                             ? <Preloader/>

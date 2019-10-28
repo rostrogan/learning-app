@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {addMessageCreator, updateMessageTextCreator} from "../../store/actions/dialogs.actions";
+import {addMessage, updateMessageText} from "../../store/actions/dialogs.actions";
 import s from './Dialogs.module.css';
 import Dialogs from "./Dialogs";
 
@@ -13,10 +13,10 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         updateNewMessageBody: (body) => {
-            dispatch(updateMessageTextCreator(body));
+            dispatch(updateMessageText(body));
         },
         sendMessage: () => {
-            dispatch(addMessageCreator());
+            dispatch(addMessage());
         }
     }
 };

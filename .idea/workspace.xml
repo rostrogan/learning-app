@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa13560c-933e-4fac-b6f5-887bac71a57e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/auth.api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/profile.api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersAPIComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersAPIComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/auth.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/auth.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/dialogs.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/dialogs.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/profile.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/profile.actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/users.actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/users.actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +29,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,7 +66,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b4dd9545-3979-4fab-8852-0da90712265a" name="Default Changelist" comment="" />
+      <changelist id="fa13560c-933e-4fac-b6f5-887bac71a57e" name="Default Changelist" comment="" />
       <created>1572023660227</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -61,6 +75,7 @@
       <workItem from="1572073750276" duration="5294000" />
       <workItem from="1572179542513" duration="633000" />
       <workItem from="1572180232213" duration="2145000" />
+      <workItem from="1572266151574" duration="5533000" />
     </task>
     <servers />
   </component>
